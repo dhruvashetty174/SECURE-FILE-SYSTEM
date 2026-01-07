@@ -14,7 +14,6 @@ import UploadPage from "./pages/UploadPage";
 import Profile from "./pages/Profile";
 import "./styles.css";
 import Home from "./pages/Home";
-import Loader from "./components/Loader";
 // function Home() {
 //   return (
 //     <div className="container">
@@ -28,7 +27,6 @@ function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-      {/* <Loader /> */}
         <Navbar />
         <Routes>
 
