@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import api from "../api";
+import "./Styles/FileView.css";
 
 export default function FileView() {
   const { link } = useParams();
@@ -57,18 +58,7 @@ export default function FileView() {
 
   return (
     <div className="container file-view-wrapper">
-      <style>{`
-        .file-view-wrapper { max-width: 600px; margin: 60px auto; font-family: 'Inter', sans-serif; padding: 0 20px; }
-        .title { font-size: 26px; font-weight: 800; color: #111827; margin-bottom: 12px; }
-        .muted { font-size: 13px; color: #6b7280; margin-bottom: 16px; }
-        .form { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
-        .input { padding: 12px 16px; border: 1px solid #d1d5db; border-radius: 10px; outline: none; font-size: 14px; }
-        .input:focus { border-color: #1a7ef2; box-shadow: 0 0 0 3px rgba(26,126,242,0.1); }
-        .btn-primary { background: #1a7ef2; color: white; border: none; padding: 12px; border-radius: 10px; font-weight: 600; cursor: pointer; transition: background 0.2s; }
-        .btn-primary:hover { background: #1565c0; }
-        .loading-state { text-align: center; padding: 40px; color: #6b7280; font-weight: 500; }
-        .error { background: #fee2e2; color: #dc2626; padding: 12px 16px; border-radius: 8px; font-size: 14px; margin-bottom: 16px; }
-      `}</style>
+      
 
       <h2 className="title">File Download</h2>
       {expiryDate && <div className="muted">Expires: {expiryDate.toLocaleString()} ({expired ? "Expired" : "Active"})</div>}

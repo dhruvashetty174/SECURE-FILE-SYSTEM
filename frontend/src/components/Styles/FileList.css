@@ -1,0 +1,88 @@
+     .file-container { border: 2px solid #1a7ef2; border-radius: 12px; font-family: sans-serif; max-width: 950px; margin: 20px auto; position: relative; }
+        .expiry-toast { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: #fee2e2; color: #b91c1c; padding: 12px 24px; border-radius: 8px; border: 1px solid #f87171; font-weight: bold; z-index: 9999; animation: fadeInOut 3s forwards; }
+        .success-toast { background: #dcfce7; color: #15803d; border-color: #86efac; }
+        @keyframes fadeInOut { 0% { opacity: 0; transform: translate(-50%, -10px); } 10% { opacity: 1; transform: translate(-50%, 0); } 90% { opacity: 1; transform: translate(-50%, 0); } 100% { opacity: 0; transform: translate(-50%, -10px); } }
+        .file-list { display: flex; flex-direction: column; gap: 12px; padding: 12px; }
+        .file-card { display: flex; flex-direction: column; padding: 16px; background: #fff; border: 1px solid #eef0f2; border-radius: 12px; }
+        .card-row { display: flex; justify-content: space-between; align-items: center; }
+        .file-main { display: flex; align-items: center; gap: 16px; }
+        .icon-wrapper { width: 40px; height: 40px; background: #f8fafc; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+        .file-name { font-weight: 600; color: #1e293b; }
+        .status-badge { font-size: 10px; padding: 2px 8px; border-radius: 6px; margin-left: 8px; }
+        .status-active { background: #dcfce7; color: #15803d; }
+        .status-expired { background: #fee2e2; color: #b91c1c; }
+        .file-actions { display: flex; gap: 8px; }
+        .btn { padding: 8px 12px; font-size: 12px; border-radius: 8px; cursor: pointer; border: 1px solid #e2e8f0; background: #fff; }
+        .btn-primary { background: #2563eb; color: #fff; border: none; }
+        .btn-expired { background: #f1f5f9; color: #94a3b8; cursor: not-allowed; }
+        .hidden-input { display: none; }
+
+
+
+        /* =======================
+   MOBILE RESPONSIVE FIX
+   ======================= */
+@media (max-width: 768px) {
+
+  .file-container {
+    margin: 12px;
+    padding: 0;
+    border-radius: 10px;
+  }
+
+  .file-list {
+    padding: 8px;
+    gap: 10px;
+  }
+
+  .file-card {
+    padding: 12px;
+  }
+
+  .card-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .file-main {
+    gap: 12px;
+    width: 100%;
+  }
+
+  .icon-wrapper {
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+  }
+
+  .file-name {
+    font-size: 14px;
+    word-break: break-word;
+  }
+
+  .status-badge {
+    font-size: 9px;
+    padding: 2px 6px;
+  }
+
+  .file-actions {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 11px;
+    border-radius: 6px;
+  }
+
+  .expiry-toast {
+    width: calc(100% - 24px);
+    font-size: 13px;
+    padding: 10px 14px;
+    text-align: center;
+  }
+}
