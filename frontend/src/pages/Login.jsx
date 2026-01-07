@@ -70,7 +70,7 @@ export default function Login() {
               <input 
                 className="input" 
                 type={showPassword ? "text" : "password"} 
-                placeholder="••••••••"
+                placeholder="Enter your password"
                 value={password} 
                 onChange={(e) => setPassword(e.target.value)} 
                 required

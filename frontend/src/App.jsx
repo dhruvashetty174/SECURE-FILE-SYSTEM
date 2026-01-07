@@ -28,7 +28,7 @@ function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-      <Loader />
+      {/* <Loader /> */}
         <Navbar />
         <Routes>
 
